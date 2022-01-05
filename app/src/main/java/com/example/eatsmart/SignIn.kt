@@ -3,23 +3,22 @@ package com.example.eatsmart
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+import android.view.View
 import android.widget.*
 
-class MainActivity : AppCompatActivity() {
+class SignIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.sign_in)
 
-        val signUpBtn : Button = findViewById(R.id.sign_up)
-        signUpBtn.setOnClickListener{
-            val intent = Intent(this, SignUp::class.java)
-            startActivity(intent)
-        }
-
-        val signInBtn : Button = findViewById(R.id.sign_in)
+        val signInBtn : Button = findViewById(R.id.sign_up2)
         signInBtn.setOnClickListener{
             val intent = Intent(this, SignIn::class.java)
             startActivity(intent)
         }
+    }
+
+    fun onClickCheckUserCredentials(view: View?) {
+
     }
 }
