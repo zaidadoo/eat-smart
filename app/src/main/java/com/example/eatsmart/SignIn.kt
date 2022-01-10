@@ -11,18 +11,24 @@ import android.widget.*
 import android.database.Cursor
 
 class SignIn : AppCompatActivity() {
-    //var helper = DatabaseHelper(applicationContext)
-    //var db = helper.readableDatabase
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_in)
 
-        val signInBtn : Button = findViewById(R.id.sign_up2)
-        signInBtn.setOnClickListener{
+        val signUpBtn : Button = findViewById(R.id.sign_up2)
+        signUpBtn.setOnClickListener{
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
-    }
 
+        val signInBtn : Button = findViewById(R.id.sign_in2)
+        signInBtn.setOnClickListener{
+            //double check the record is there
+            //
+
+            //take user to app services if it is
+            val intent = Intent(this, AppServices::class.java)
+            startActivity(intent)
+        }
+    }
 }

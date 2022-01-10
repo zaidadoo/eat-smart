@@ -12,8 +12,9 @@
         android:theme="@style/Theme.EatSmart">
 
         <activity android:name=".SignUp"/>
-
         <activity android:name=".SignIn"/>
+        <activity android:name=".AppServices"/>
+        <activity android:name=".CaloriesCounter"/>
 
         <activity
             android:name=".MainActivity"
