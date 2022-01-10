@@ -24,70 +24,78 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginBottom="38dp"
         android:text="Hypertension"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginBottom="38dp"
         android:text="Anemia"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginBottom="39dp"
         android:text="Celiac Disease"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginBottom="38dp"
         android:text="Diabetes"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginBottom="38dp"
         android:text="Kwashiorkor"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginBottom="39dp"
         android:text="Rickets"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="37dp"
         android:text="Marasmus"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="564dp" />
+        app:layout_constraintBottom_toTopOf="@+id/suggest_more2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
         android:id="@+id/switch1"
@@ -154,9 +162,38 @@
         android:id="@+id/switch7"
         android:layout_width="62dp"
         android:layout_height="62dp"
+        android:layout_marginBottom="119dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        app:layout_constraintEnd_toEndOf="@+id/switch6"
-        tools:layout_editor_absoluteY="550dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/switch6" />
+
+    <Button
+        android:id="@+id/allergy_home"
+        android:layout_width="120dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#AFAFAF"
+        android:onClick="onClickCheckUserCredentials"
+        android:text="Home"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/suggest_more2" />
+
+    <Button
+        android:id="@+id/suggest_more2"
+        android:layout_width="120dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#9DCA39"
+        android:onClick="onClickCheckUserCredentials"
+        android:text="Suggest  More"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/allergy_home"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
