@@ -14,14 +14,13 @@ class SignUp : AppCompatActivity() {
 
         val signInBtn : Button = findViewById(R.id.sign_up2)
         signInBtn.setOnClickListener{
-            val intent = Intent(this, SignUp::class.java)
+            val intent = Intent(this, SignIn::class.java)
             startActivity(intent)
         }
     }
 
-    fun onClickAddUser(view: View?) {
-        //add a new user
-        // add all attributes/columns to values using put
+    fun onClickAddUser() {
+        //add all attributes/columns to values (ContentValues variable) using put
         val values = ContentValues()
 
         //adding email
@@ -42,7 +41,13 @@ class SignUp : AppCompatActivity() {
             (findViewById<View>(R.id.editTextTextPassword) as EditText).text.toString()
         )
 
+        //call insert function from UsersProvider
         val uri = contentResolver.insert(UsersProvider.CONTENT_URI, values)
-        Toast.makeText(baseContext, uri.toString(), Toast.LENGTH_LONG).show()
+
+        //add a toast
+        Toast.makeText(baseContext, uri.toString() + " registered!", Toast.LENGTH_LONG).show()
+
+        val intent = Intent(this, SignIn::class.java)
+        startActivity(intent)
     }
 }
