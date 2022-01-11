@@ -12,7 +12,7 @@ class AppServices : AppCompatActivity() {
 
         val findRestaurant = findViewById<ImageView>(R.id.imageView5)
         findRestaurant.setOnClickListener {
-            val intent = Intent(this, SignUp::class.java)
+            val intent = Intent(this, MapsActivity::class.java)
             startActivity(intent)
         }
 
