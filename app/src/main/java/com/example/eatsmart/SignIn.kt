@@ -36,6 +36,9 @@ class SignIn : AppCompatActivity() {
                 } while (c.moveToNext())
             }
         }
+
+        val intent = Intent(this, AppServices::class.java)
+        startActivity(intent)
     }
 
 }

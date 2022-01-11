@@ -39,26 +39,45 @@ class CaloriesCounter : AppCompatActivity() {
             }
         }
 
-//        calcBtn.setOnClickListener {
-//            //different equation for men and women
-//            if(flag == "Female"){
-//                result.text = calCalories('F',
-//                    age.text.toInt(), height.text.toDouble(), weight.text.toDouble()).toString()
-//            }
-//
-//            else if(flag == "Male"){
-//                result.text = calCalories('M',
-//                    age.text.toInt(), height.text.toDouble(), weight.text.toDouble()).toString()            }
-//        }
+        calcBtn.setOnClickListener {
+            val radioGroup = findViewById<RadioGroup>(R.id.minutesRadioGroup)
+            val selectedMinutes : Int = radioGroup.checkedRadioButtonId
+            val radioButton = findViewById<RadioButton>(selectedMinutes)
+
+            //different equation for men and women
+            if(flag == "Female"){
+                result.text = calCalories('F',
+                    age.text.toString().toInt(), height.text.toString().toDouble(), weight.text.toString().toDouble(), radioButton).toString()
+            }
+
+            else if(flag == "Male"){
+                result.text = calCalories('M',
+                    age.text.toString().toInt(), height.text.toString().toDouble(), weight.text.toString().toDouble(), radioButton).toString()
+            }
+        }
     }
 }
 
-public fun calCalories(gender : Char, age : Int, height : Double, weight : Double) {
+public fun calCalories(gender : Char, age : Int, height : Double, weight : Double, radioButton : RadioButton) : String {
+    var BMR : Double = 1.0
+    var res : Double = 0.0
+
+    when(radioButton.text) {
+        "0-30" -> BMR = 1.2
+        "30-60" -> BMR = 1.375
+        "60-90" -> BMR = 1.55
+        "90-120" -> BMR = 1.725
+        "120+" -> BMR = 1.9
+    }
+
     if(gender == 'F'){
-        return ;
+        res = BMR * (10 * weight + 6.25 * height - 5 * age - 161)
+
     }
 
     else if(gender == 'M'){
-        return ;
+        res = BMR * (10 * weight + 6.25 * height - 5 * age + 5)
     }
+
+    return  res.toInt().toString() + " Calories"
 }

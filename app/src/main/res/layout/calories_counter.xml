@@ -197,7 +197,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginBottom="33dp"
-        android:text="1200 Calories"
+        android:text="0 Calories"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -207,7 +207,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/minutesRadioGroup"
         android:layout_width="375dp"
         android:layout_height="83dp"
         android:layout_marginBottom="20dp"
@@ -220,18 +220,6 @@
         app:layout_constraintVertical_bias="0.867">
 
         <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="60-90" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="90-120" />
-
-        <RadioButton
             android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -242,6 +230,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30-60" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60-90" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90-120" />
 
         <RadioButton
             android:id="@+id/radioButton5"
