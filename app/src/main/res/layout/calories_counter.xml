@@ -207,7 +207,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <RadioGroup
-        android:id="@+id/activityRadioGroup"
+        android:id="@+id/minutesRadioGroup"
         android:layout_width="375dp"
         android:layout_height="83dp"
         android:layout_marginBottom="20dp"
@@ -220,31 +220,31 @@
         app:layout_constraintVertical_bias="0.867">
 
         <RadioButton
-            android:id="@+id/firstGroupRB"
+            android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0-30" />
 
         <RadioButton
-            android:id="@+id/secondGroupRB"
+            android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30-60" />
 
         <RadioButton
-            android:id="@+id/thirdGroupRB"
+            android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="60-90" />
 
         <RadioButton
-            android:id="@+id/fourthGroupRB"
+            android:id="@+id/radioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="90-120" />
 
         <RadioButton
-            android:id="@+id/fifthGroupRB"
+            android:id="@+id/radioButton5"
             android:layout_width="86dp"
             android:layout_height="49dp"
             android:text="120+" />

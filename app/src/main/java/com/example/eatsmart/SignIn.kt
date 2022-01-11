@@ -12,26 +12,33 @@ class SignIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_in)
 
-        val signUpBtn : Button = findViewById(R.id.sign_in2)
+        val signUpBtn : Button = findViewById(R.id.sign_up2)
         signUpBtn.setOnClickListener{
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
-
-        val signInBtn : Button = findViewById(R.id.sign_up2)
-        signInBtn.setOnClickListener{
-            //double check the record is there
-
-
-            //take user to app services if it is
-            val intent = Intent(this, AppServices::class.java)
-            startActivity(intent)
-        }
-
-        fun onClickCheckUserCredentials(view: View?) {
-            // Retrieve student records
-//            val URL = "content://com.example.eatsmart.UsersProvider"
-//            val students = Uri.parse(URL)
-        }
     }
+
+    fun onClickCheckUserCredentials(view: View?) {
+        // Retrieve student records
+        val URL = "content://com.example.MyApplication.StudentsProvider"
+        val students = Uri.parse(URL)
+        //\  val c = contentResolver!!.query(students,null,null,null,"name")
+        var c = contentResolver.query(students, null, null, null,null)
+        //val //c = managedQuery(students, null, null, null, "name")
+        if (c != null) {
+            if (c?.moveToFirst()) {
+                do {
+
+                    Toast.makeText(this, c.getString(c.getColumnIndex(UsersProvider.userID)) +
+                            ", " + c.getString(c.getColumnIndex(UsersProvider.fullName)) + ", "
+                            + c.getString(c.getColumnIndex(UsersProvider.email)), Toast.LENGTH_SHORT).show()
+                } while (c.moveToNext())
+            }
+        }
+
+        val intent = Intent(this, AppServices::class.java)
+        startActivity(intent)
+    }
+
 }
