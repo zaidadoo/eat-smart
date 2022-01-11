@@ -20,24 +20,24 @@ class SignIn : AppCompatActivity() {
     }
 
     fun onClickCheckUserCredentials(view: View?) {
-        // Retrieve student records
-        val URL = "content://com.example.MyApplication.StudentsProvider"
-        val students = Uri.parse(URL)
-        //\  val c = contentResolver!!.query(students,null,null,null,"name")
-        var c = contentResolver.query(students, null, null, null,null)
-        //val //c = managedQuery(students, null, null, null, "name")
-        if (c != null) {
-            if (c?.moveToFirst()) {
-                do {
+//        // Retrieve student records
+//        val URL = "content://com.example.MyApplication.StudentsProvider"
+//        val students = Uri.parse(URL)
+//        //\  val c = contentResolver!!.query(students,null,null,null,"name")
+//        var c = contentResolver.query(students, null, null, null,null)
+//        //val //c = managedQuery(students, null, null, null, "name")
+//        if (c != null) {
+//            if (c?.moveToFirst()) {
+//                do {
+//
+//                    Toast.makeText(this, c.getString(c.getColumnIndex(StudentsProvider._ID)) +
+//                            ", " + c.getString(c.getColumnIndex(StudentsProvider.NAME)) + ", "
+//                            + c.getString(c.getColumnIndex(StudentsProvider.EMAIL)), Toast.LENGTH_SHORT).show()
+//                } while (c.moveToNext())
+//            }
+//        }
 
-                    Toast.makeText(this, c.getString(c.getColumnIndex(UsersProvider.userID)) +
-                            ", " + c.getString(c.getColumnIndex(UsersProvider.fullName)) + ", "
-                            + c.getString(c.getColumnIndex(UsersProvider.email)), Toast.LENGTH_SHORT).show()
-                } while (c.moveToNext())
-            }
-        }
-
-        val intent = Intent(this, AppServices::class.java)
+        val intent = Intent(this, AllergiesSelection::class.java)
         startActivity(intent)
     }
 

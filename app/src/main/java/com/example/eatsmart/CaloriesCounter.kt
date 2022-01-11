@@ -3,6 +3,8 @@ package com.example.eatsmart
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 
@@ -55,6 +57,37 @@ class CaloriesCounter : AppCompatActivity() {
                     age.text.toString().toInt(), height.text.toString().toDouble(), weight.text.toString().toDouble(), radioButton).toString()
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.appServices -> {
+                val intent = Intent(this, AppServices::class.java)
+                startActivity(intent)
+            }
+
+            R.id.userSettings -> {
+                val intent = Intent(this, SignIn::class.java)
+                startActivity(intent)
+            }
+
+            R.id.editAllergiesDiseases -> {
+                val intent = Intent(this, AllergiesSelection::class.java)
+                startActivity(intent)
+            }
+
+            R.id.signOut -> {
+                val intent = Intent(this, SignIn::class.java)
+                startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
 

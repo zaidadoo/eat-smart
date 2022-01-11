@@ -20,31 +20,31 @@ class SignUp : AppCompatActivity() {
     }
 
     fun onClickAddUser(view: View?) {
-        //add all attributes/columns to values (ContentValues variable) using put
-        val values = ContentValues()
-
-        //adding email
-        values.put(
-            UsersProvider.email,
-            (findViewById<View>(R.id.editTextTextEmailAddress) as EditText).text.toString()
-        )
-
-        //adding full name
-        values.put(
-            UsersProvider.fullName,
-            (findViewById<View>(R.id.editTextTextPersonName) as EditText).text.toString()
-        )
-
-        //adding password
-        values.put(
-            UsersProvider.password,
-            (findViewById<View>(R.id.editTextTextPassword) as EditText).text.toString()
-        )
-
-        //call insert function from UsersProvider
-        val uri = contentResolver.insert(UsersProvider.CONTENT_URI, values)
-
-        //add a toast
-        Toast.makeText(baseContext, uri.toString() + " registered!", Toast.LENGTH_LONG).show()
+//        //add all attributes/columns to values (ContentValues variable) using put
+//        val values = ContentValues()
+//
+//        //adding email
+//        values.put(
+//            UsersProvider.email,
+//            (findViewById<View>(R.id.editTextTextEmailAddress) as EditText).text.toString()
+//        )
+//
+//        //adding full name
+//        values.put(
+//            UsersProvider.fullName,
+//            (findViewById<View>(R.id.editTextTextPersonName) as EditText).text.toString()
+//        )
+//
+//        //adding password
+//        values.put(
+//            UsersProvider.password,
+//            (findViewById<View>(R.id.editTextTextPassword) as EditText).text.toString()
+//        )
+//
+//        //call insert function from UsersProvider
+//        val uri = contentResolver.insert(UsersProvider.CONTENT_URI, values)
+//
+//        //add a toast
+//        Toast.makeText(baseContext, uri.toString() + " registered!", Toast.LENGTH_LONG).show()
     }
 }
