@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/sign_up2"
+        android:id="@+id/sign_in2"
         android:layout_width="120dp"
         android:layout_height="62dp"
         android:layout_marginTop="58dp"
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/label_signup"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in2" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_up2" />
 
     <TextView
         android:id="@+id/label_signup"
@@ -26,13 +26,13 @@
         android:layout_marginTop="73dp"
         android:text="No Account?"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/sign_up2"
+        app:layout_constraintEnd_toStartOf="@+id/sign_in2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in2" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_up2" />
 
     <Button
-        android:id="@+id/sign_in2"
+        android:id="@+id/sign_up2"
         android:layout_width="250dp"
         android:layout_height="61dp"
         android:layout_marginTop="48dp"
@@ -87,7 +87,7 @@
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="sign_up2,label_signup"
+        app:constraint_referenced_ids="sign_in2,label_signup"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
