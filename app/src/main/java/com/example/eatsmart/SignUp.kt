@@ -19,7 +19,7 @@ class SignUp : AppCompatActivity() {
         }
     }
 
-    fun onClickAddUser() {
+    fun onClickAddUser(view: View?) {
         //add all attributes/columns to values (ContentValues variable) using put
         val values = ContentValues()
 
@@ -35,7 +35,7 @@ class SignUp : AppCompatActivity() {
             (findViewById<View>(R.id.editTextTextPersonName) as EditText).text.toString()
         )
 
-        //adding email
+        //adding password
         values.put(
             UsersProvider.password,
             (findViewById<View>(R.id.editTextTextPassword) as EditText).text.toString()
@@ -46,8 +46,5 @@ class SignUp : AppCompatActivity() {
 
         //add a toast
         Toast.makeText(baseContext, uri.toString() + " registered!", Toast.LENGTH_LONG).show()
-
-        val intent = Intent(this, SignIn::class.java)
-        startActivity(intent)
     }
 }

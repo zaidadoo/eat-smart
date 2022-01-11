@@ -12,12 +12,11 @@
         android:layout_marginTop="58dp"
         android:backgroundTint="#AFAFAF"
         android:text="Sign Up"
-        android:onClick="onClickCheckUserCredentials"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/label_signup"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in2" />
+        app:layout_constraintTop_toBottomOf="@+id/signUp_complete" />
 
     <TextView
         android:id="@+id/label_signup"
@@ -29,15 +28,16 @@
         app:layout_constraintEnd_toStartOf="@+id/sign_up2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in2" />
+        app:layout_constraintTop_toBottomOf="@+id/signUp_complete" />
 
     <Button
-        android:id="@+id/sign_in2"
+        android:id="@+id/signUp_complete"
         android:layout_width="250dp"
         android:layout_height="61dp"
         android:layout_marginTop="48dp"
         android:backgroundTint="#9DCA39"
         android:text="Sign In"
+        android:onClick="onClickCheckUserCredentials"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
