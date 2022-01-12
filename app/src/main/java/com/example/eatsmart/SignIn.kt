@@ -1,11 +1,20 @@
 package com.example.eatsmart
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.net.Uri
 import android.view.View
 import android.widget.*
+import android.widget.EditText
+import android.widget.Toast
+import android.database.Cursor
+
+import android.database.sqlite.SQLiteDatabase
+
+
+
 
 class SignIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,25 +29,28 @@ class SignIn : AppCompatActivity() {
     }
 
     fun onClickCheckUserCredentials(view: View?) {
-//        // Retrieve student records
-//        val URL = "content://com.example.MyApplication.StudentsProvider"
-//        val students = Uri.parse(URL)
-//        //\  val c = contentResolver!!.query(students,null,null,null,"name")
-//        var c = contentResolver.query(students, null, null, null,null)
-//        //val //c = managedQuery(students, null, null, null, "name")
+        // Retrieve student records
+        val userEmail : EditText = findViewById(R.id.userEmail)
+        val userPassword : EditText = findViewById(R.id.userPassword)
+        val URL = "content://com.example.EatSmart.UsersProvider"
+        val users = Uri.parse(URL)
+
+        //val Query = "Select * from users where email = " + userEmail + " AND password = " + userPassword
+
+
+//        var c = contentResolver.query(users, null, null, null,null)
+//
 //        if (c != null) {
 //            if (c?.moveToFirst()) {
 //                do {
+//                    if(c.getString(c.getColumnIndex(UsersProvider.email)) == userEmail.text.toString()
+//                                && c.getString(c.getColumnIndex(UsersProvider.password)) == userPassword.text.toString()){
 //
-//                    Toast.makeText(this, c.getString(c.getColumnIndex(StudentsProvider._ID)) +
-//                            ", " + c.getString(c.getColumnIndex(StudentsProvider.NAME)) + ", "
-//                            + c.getString(c.getColumnIndex(StudentsProvider.EMAIL)), Toast.LENGTH_SHORT).show()
+//                        val intent = Intent(this, AllergiesSelection::class.java)
+//                        startActivity(intent)
+//                    }
 //                } while (c.moveToNext())
 //            }
 //        }
-
-        val intent = Intent(this, AllergiesSelection::class.java)
-        startActivity(intent)
     }
-
 }

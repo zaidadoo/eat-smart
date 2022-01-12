@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteQueryBuilder
 import android.provider.BaseColumns._ID
+import android.provider.ContactsContract
 import android.text.TextUtils
 import com.example.eatsmart.UsersProvider.Companion.CREATE_DB_TABLE
 import com.example.eatsmart.UsersProvider.Companion.USERS_TABLE_NAME
