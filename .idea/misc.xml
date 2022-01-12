@@ -4,28 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.17407407407407408" />
+        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/drawable/ic_completed_steps_bro.xml" value="0.18518518518518517" />
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17407407407407408" />
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/drawable/ic_peach_bro.xml" value="0.17407407407407408" />
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/drawable/main_logo_background.xml" value="0.17407407407407408" />
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
-        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/allergies_selection.xml" value="0.1796875" />
+        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/activity_maps.xml" value="0.1796875" />
+        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/allergies_selection.xml" value="0.22" />
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/app_services.xml" value="0.12" />
-        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/calories_counter.xml" value="0.1796875" />
+        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/calories_counter.xml" value="0.22" />
+        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/delete_user_alert.xml" value="0.1796875" />
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/main_page.xml" value="0.1796875" />
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/sign_in.xml" value="0.1796875" />
         <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/sign_up.xml" value="0.1796875" />
+        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/layout/user_settings.xml" value="0.1796875" />
+        <entry key="..\:/Users/Farah Ghanma/eat-smart/app/src/main/res/menu/main_menu.xml" value="0.22" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/EatSmart2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/EatSmart2/app/src/main/res/layout/allergies_selection.xml" value="0.22" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/EatSmart2/app/src/main/res/layout/sign_in.xml" value="0.2" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/EatSmart2/app/src/main/res/layout/sign_up.xml" value="0.18" />
-        <entry key="..\:/Users/USERR/AndroidStudioProjects/eat-smart/app/src/main/res/layout/activity_main.xml" value="0.3625" />
-        <entry key="..\:/Users/USERR/AndroidStudioProjects/eat-smart/app/src/main/res/layout/allergies_selection.xml" value="0.5" />
-        <entry key="..\:/Users/USERR/AndroidStudioProjects/eat-smart/app/src/main/res/layout/app_services.xml" value="0.25" />
-        <entry key="..\:/Users/USERR/AndroidStudioProjects/eat-smart/app/src/main/res/layout/calories_counter.xml" value="0.33" />
-        <entry key="..\:/Users/USERR/AndroidStudioProjects/eat-smart/app/src/main/res/layout/location.xml" value="0.20260416666666667" />
-        <entry key="..\:/Users/USERR/AndroidStudioProjects/eat-smart/app/src/main/res/layout/sign_in.xml" value="0.20260416666666667" />
-        <entry key="..\:/Users/USERR/AndroidStudioProjects/eat-smart/app/src/main/res/layout/sign_up.xml" value="0.20260416666666667" />
-        <entry key="..\:/Users/USERR/AndroidStudioProjects/eat-smart/app/src/main/res/menu/main_menu.xml" value="0.20260416666666667" />
       </map>
     </option>
   </component>

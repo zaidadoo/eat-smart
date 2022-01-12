@@ -13,9 +13,6 @@ import android.database.Cursor
 
 import android.database.sqlite.SQLiteDatabase
 
-
-
-
 class SignIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,28 +26,32 @@ class SignIn : AppCompatActivity() {
     }
 
     fun onClickCheckUserCredentials(view: View?) {
-        // Retrieve student records
         val userEmail : EditText = findViewById(R.id.userEmail)
         val userPassword : EditText = findViewById(R.id.userPassword)
-        val URL = "content://com.example.EatSmart.UsersProvider"
-        val users = Uri.parse(URL)
 
-        //val Query = "Select * from users where email = " + userEmail + " AND password = " + userPassword
-
-
-//        var c = contentResolver.query(users, null, null, null,null)
+//        val URL = "content://com.example.EatSmart.UsersProvider"
+//        val users = Uri.parse(URL)
 //
-//        if (c != null) {
-//            if (c?.moveToFirst()) {
-//                do {
-//                    if(c.getString(c.getColumnIndex(UsersProvider.email)) == userEmail.text.toString()
-//                                && c.getString(c.getColumnIndex(UsersProvider.password)) == userPassword.text.toString()){
+////        var c = contentResolver.query(users, null, null, null,null)
+////        var flag = 0
 //
-//                        val intent = Intent(this, AllergiesSelection::class.java)
-//                        startActivity(intent)
-//                    }
-//                } while (c.moveToNext())
-//            }
+//        var rs = contentResolver.query(users,
+//            null,
+//            "email = " + userEmail + " AND password = " + userPassword,
+//            null, null)
+//
+//        if (rs?.moveToNext() == true){
+//            val intent = Intent(this, AllergiesSelection::class.java)
+//            startActivity(intent)
+//
+//
 //        }
+
+//        //no records of those credentials were found
+//        if(flag == 0){
+//            Toast.makeText(applicationContext, "User not found!", Toast.LENGTH_SHORT).show()
+//        }
+        val intent = Intent(this, AllergiesSelection::class.java)
+        startActivity(intent)
     }
 }

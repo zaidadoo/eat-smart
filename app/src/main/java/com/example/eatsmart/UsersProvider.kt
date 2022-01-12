@@ -9,11 +9,7 @@ import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteQueryBuilder
-import android.provider.BaseColumns._ID
-import android.provider.ContactsContract
 import android.text.TextUtils
-import com.example.eatsmart.UsersProvider.Companion.CREATE_DB_TABLE
-import com.example.eatsmart.UsersProvider.Companion.USERS_TABLE_NAME
 import java.lang.IllegalArgumentException
 
 class UsersProvider : ContentProvider() {
@@ -124,12 +120,11 @@ class UsersProvider : ContentProvider() {
             USERS -> count = db!!.delete(
                 USERS_TABLE_NAME, selection, selectionArgs
             )
-
             USER_ID -> {
                 val id = uri.pathSegments[1]
                 count = db!!.delete(
                     USERS_TABLE_NAME,
-                    _ID + "=" + id + if(!TextUtils.isEmpty(selection)) " AND ($selection)" else "", selectionArgs
+                    userID + "=" + id + if(!TextUtils.isEmpty(selection)) " AND ($selection)" else "", selectionArgs
                 )
             }
             else -> throw IllegalArgumentException("Unknown URI $uri")
@@ -154,7 +149,7 @@ class UsersProvider : ContentProvider() {
             USER_ID -> count = db!!.update(
                 USERS_TABLE_NAME,
                 values,
-                _ID + " = " + uri.pathSegments[1] + (if (!TextUtils.isEmpty(selection)) " AND ($selection)" else ""),
+                userID + " = " + uri.pathSegments[1] + (if (!TextUtils.isEmpty(selection)) " AND ($selection)" else ""),
                 selectionArgs
             )
             else -> throw IllegalArgumentException("Unknown URI $uri")
@@ -162,5 +157,4 @@ class UsersProvider : ContentProvider() {
         context!!.contentResolver.notifyChange(uri, null)
         return count
     }
-
 }

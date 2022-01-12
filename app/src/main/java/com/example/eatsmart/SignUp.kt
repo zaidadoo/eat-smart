@@ -20,6 +20,8 @@ class SignUp : AppCompatActivity() {
     }
 
     fun onClickAddUser(view: View?) {
+        val userEmail : EditText = findViewById(R.id.userEmail)
+        val userName : EditText = findViewById(R.id.editTextTextPersonName)
         //add all attributes/columns to values (ContentValues variable) using put
         val values = ContentValues()
 
@@ -42,9 +44,10 @@ class SignUp : AppCompatActivity() {
         )
 
         //call insert function from UsersProvider
-        val uri = contentResolver.insert(UsersProvider.CONTENT_URI, values)
+        contentResolver.insert(UsersProvider.CONTENT_URI, values)
 
         //add a toast
-        Toast.makeText(baseContext, uri.toString() + " registered!", Toast.LENGTH_LONG).show()
+        Toast.makeText(baseContext, userEmail.text.toString() + " , " + userName.text.toString()
+                + " registered!", Toast.LENGTH_LONG).show()
     }
 }

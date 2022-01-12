@@ -14,27 +14,21 @@ class UserSettings : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_settings)
-
     }
 
     fun onClickUpdateUser(){
         val values = ContentValues()
-        //updating email
-        values.put(
-            UsersProvider.email,
-            (findViewById<View>(R.id.userEmail) as EditText).text.toString()
-        )
+        val updateRequestEmail : EditText = findViewById(R.id.userEmail)
+        val updateRequestPassword : EditText = findViewById(R.id.userPassword)
 
         //updating password
         values.put(
-            UsersProvider.password,
-            (findViewById<View>(R.id.userPassword) as EditText).text.toString()
+            UsersProvider.password, updateRequestPassword.text.toString()
         )
 
         //call insert function from UsersProvider
-        val uri = contentResolver.update(UsersProvider.CONTENT_URI,
-            values, "userID = ?",
-            arrayOf((findViewById<View>(R.id.userEmail) as EditText).text.toString()))
+        contentResolver.update(UsersProvider.CONTENT_URI, values, "email = ? AND password = ?",
+            arrayOf(updateRequestEmail.text.toString(), updateRequestPassword.text.toString()))
 
         //add a toast
         Toast.makeText(baseContext, "Record Updated!", Toast.LENGTH_LONG).show()
@@ -45,8 +39,13 @@ class UserSettings : AppCompatActivity() {
     }
 
     fun onClickDeleteUser(){
+        val deleteRequestEmail : EditText = findViewById(R.id.userEmail)
+        val deleteRequestPassword : EditText = findViewById(R.id.userPassword)
 
-        //after account has been deleted, it takes the user back to the Main Activity
+        contentResolver.delete(UsersProvider.CONTENT_URI,
+            "email = ? AND password = ?",
+            arrayOf(deleteRequestEmail.text.toString(), deleteRequestPassword.text.toString()))
+
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
