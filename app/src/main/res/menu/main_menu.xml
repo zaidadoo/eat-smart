@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/mainItem"
-        android:title="Main Item"
-        android:icon="@drawable/burger_menu"
-        app:showAsAction="ifRoom"/>
-
-    <item
         android:id="@+id/appServices"
         android:title="App Services"
         app:showAsAction="never"/>
