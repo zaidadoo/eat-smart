@@ -18,6 +18,7 @@
         <activity android:name=".AppServices"/>
         <activity android:name=".CaloriesCounter"/>
         <activity android:name=".AllergiesSelection"/>
+        <activity android:name=".UserSettings"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -37,11 +38,11 @@
             </intent-filter>
         </activity>
 
-        <!--        <provider-->
-        <!--            android:name="UsersProvider"-->
-        <!--            android:authorities="com.example.MyApplication.UserProvider"-->
-        <!--            android:exported="true"-->
-        <!--            android:grantUriPermissions="true"/>-->
+                <provider
+                    android:name="UsersProvider"
+                    android:authorities="com.example.EatSmart.UsersProvider"
+                    android:exported="true"
+                    android:grantUriPermissions="true"/>
     </application>
 
 </manifest>

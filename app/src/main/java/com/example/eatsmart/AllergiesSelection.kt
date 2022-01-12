@@ -18,6 +18,17 @@ class AllergiesSelection : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val suggestMore : Button = findViewById(R.id.suggest_more2)
+        suggestMore.setOnClickListener {
+            //this part helps the user open gmail and send an email to the specified email
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "plain/text"
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("eatsmartjo@gmail.com"))
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Suggesting More Allergies/Diseases")
+            intent.putExtra(Intent.EXTRA_TEXT, "mail body")
+            startActivity(Intent.createChooser(intent, ""))
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -34,7 +45,7 @@ class AllergiesSelection : AppCompatActivity() {
             }
 
             R.id.userSettings -> {
-                val intent = Intent(this, SignIn::class.java)
+                val intent = Intent(this, UserSettings::class.java)
                 startActivity(intent)
             }
 

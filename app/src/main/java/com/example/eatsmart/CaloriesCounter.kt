@@ -73,7 +73,7 @@ class CaloriesCounter : AppCompatActivity() {
             }
 
             R.id.userSettings -> {
-                val intent = Intent(this, SignIn::class.java)
+                val intent = Intent(this, UserSettings::class.java)
                 startActivity(intent)
             }
 

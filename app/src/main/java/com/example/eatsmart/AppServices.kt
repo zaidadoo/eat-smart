@@ -24,7 +24,7 @@ class AppServices : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "plain/text"
             intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("eatsmartjo@gmail.com"))
-            intent.putExtra(Intent.EXTRA_SUBJECT, "subject")
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Suggesting More Restaurants")
             intent.putExtra(Intent.EXTRA_TEXT, "mail body")
             startActivity(Intent.createChooser(intent, ""))
         }
@@ -50,7 +50,7 @@ class AppServices : AppCompatActivity() {
             }
 
             R.id.userSettings -> {
-                val intent = Intent(this, SignIn::class.java)
+                val intent = Intent(this, UserSettings::class.java)
                 startActivity(intent)
             }
 
