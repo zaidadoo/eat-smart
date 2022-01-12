@@ -12,7 +12,11 @@ class AllergiesSelection : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.allergies_selection)
 
-        //val homeBtn : Button = findViewById(R.id.)
+        val homeBtn : Button = findViewById(R.id.allergy_home)
+        homeBtn.setOnClickListener {
+            val intent = Intent(this, AppServices::class.java)
+            startActivity(intent)
+        }
 
     }
 

@@ -17,6 +17,14 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".AppServices"/>
         <activity android:name=".CaloriesCounter"/>
+        <activity android:name=".AllergiesSelection"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false" />
 
         <activity
             android:name=".MainActivity"
