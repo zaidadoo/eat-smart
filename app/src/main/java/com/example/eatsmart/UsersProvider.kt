@@ -79,6 +79,10 @@ class UsersProvider : ContentProvider() {
         var sortOrder = sortOrder
         val qb = SQLiteQueryBuilder()
         qb.tables = USERS_TABLE_NAME
+
+        //test if its the same value
+        var x:String = uriMatcher!!.toString()
+
         when (uriMatcher!!.match(uri)) {
             USER_ID -> qb.appendWhere(userID + "=" + uri.pathSegments[1])
             else -> {

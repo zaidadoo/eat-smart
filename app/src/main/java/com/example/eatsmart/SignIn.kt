@@ -29,28 +29,43 @@ class SignIn : AppCompatActivity() {
         val userEmail : EditText = findViewById(R.id.userEmail)
         val userPassword : EditText = findViewById(R.id.userPassword)
 
-//        val URL = "content://com.example.EatSmart.UsersProvider"
-//        val users = Uri.parse(URL)
-//
-////        var c = contentResolver.query(users, null, null, null,null)
-////        var flag = 0
-//
+        val URL = "content://com.example.EatSmart.UsersProvider"
+        val users = Uri.parse(URL)
+
+        val cols = listOf<String>(UsersProvider.email,
+            UsersProvider.password).toTypedArray()
+
 //        var rs = contentResolver.query(users,
+//                cols,
+//            "${cols[0]} LIKE ?",
+//                Array(1){"%${userEmail.text}%"},
+//                null)
+
+//        var rs = contentResolver.query(users,
+//                null,
 //            null,
-//            "email = " + userEmail + " AND password = " + userPassword,
-//            null, null)
+//                null,
+//                null)
 //
-//        if (rs?.moveToNext() == true){
+//        if(rs != null){
 //            val intent = Intent(this, AllergiesSelection::class.java)
 //            startActivity(intent)
-//
-//
 //        }
 
-//        //no records of those credentials were found
-//        if(flag == 0){
-//            Toast.makeText(applicationContext, "User not found!", Toast.LENGTH_SHORT).show()
+//        when (rs?.count) {
+//            null -> {
+//                Toast.makeText(applicationContext, "Not found!", Toast.LENGTH_SHORT).show()
+//
+//            }
+//            0 -> {
+//                Toast.makeText(applicationContext, "Not found!", Toast.LENGTH_SHORT).show()
+//
+//            }
+//            else -> {
+//                val intent = Intent(this, AllergiesSelection::class.java)
+//                startActivity(intent)            }
 //        }
+//
         val intent = Intent(this, AllergiesSelection::class.java)
         startActivity(intent)
     }
