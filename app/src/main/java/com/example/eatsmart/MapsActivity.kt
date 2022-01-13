@@ -35,25 +35,26 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
         val r1 = LatLng(31.973188,35.841687)
         val r2 = LatLng(31.973312,35.841313)
         val r3 = LatLng(31.974312,35.846563)
         val r4 = LatLng(31.973687,35.840312)
         val r5 = LatLng(31.974562,35.848813)
         val r6 = LatLng(31.975062,35.852812)
-        mMap.addMarker(MarkerOptions().position(r1).title("Ray's Fried Chicken\n(Hypertension)"))
-        mMap.addMarker(MarkerOptions().position(r2).title("Avotaco\n(Anemia)"))
-        mMap.addMarker(MarkerOptions().position(r3).title("The Fries Shop\n(Celiac Disease)"))
-        mMap.addMarker(MarkerOptions().position(r4).title("Ahwitna Cafe\n(Diabetes)"))
-        mMap.addMarker(MarkerOptions().position(r5).title("DAJAJ\n(Rickets)"))
-        mMap.addMarker(MarkerOptions().position(r6).title("Shawerma Al Hakam\n(Marasmus)"))
+        mMap.addMarker(MarkerOptions().position(r1).title("Ray's Fried Chicken"))
+        mMap.addMarker(MarkerOptions().position(r2).title("Avotaco"))
+        mMap.addMarker(MarkerOptions().position(r3).title("The Fries Shop"))
+        mMap.addMarker(MarkerOptions().position(r4).title("Ahwitna Cafe"))
+        mMap.addMarker(MarkerOptions().position(r5).title("DAJAJ"))
+        mMap.addMarker(MarkerOptions().position(r6).title("Shawerma Al Hakam"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(r1))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
+
+        val allergiesList = intent.getSerializableExtra( "key" )
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
