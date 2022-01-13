@@ -12,9 +12,12 @@ class AppServices : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.app_services)
 
+        val allergiesList = intent.getSerializableExtra( "key" )
+
         val findRestaurant = findViewById<ImageView>(R.id.imageView5)
         findRestaurant.setOnClickListener {
             val intent = Intent(this, MapsActivity::class.java)
+            intent.putExtra("key", allergiesList)
             startActivity(intent)
         }
 

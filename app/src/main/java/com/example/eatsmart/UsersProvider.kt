@@ -10,11 +10,12 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteQueryBuilder
 import android.text.TextUtils
+import android.widget.Toast
 import java.lang.IllegalArgumentException
 
 class UsersProvider : ContentProvider() {
     companion object {
-        val PROVIDER_NAME = "com.example.EatSmart.UsersProvider"
+        val PROVIDER_NAME = "com.example.eatsmart.UsersProvider"
         val URL = "content://" + PROVIDER_NAME + "/users"
         val CONTENT_URI = Uri.parse(URL)
 

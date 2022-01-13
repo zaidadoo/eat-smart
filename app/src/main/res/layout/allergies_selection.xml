@@ -98,7 +98,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/hypertensionSwitch"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_marginStart="120dp"
@@ -106,69 +106,69 @@
         android:layout_marginBottom="9dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintBottom_toTopOf="@+id/anemiaSwitch"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/allergy_label" />
 
     <Switch
-        android:id="@+id/switch2"
+        android:id="@+id/anemiaSwitch"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_marginBottom="10dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        app:layout_constraintBottom_toTopOf="@+id/switch3"
-        app:layout_constraintEnd_toEndOf="@+id/switch1" />
+        app:layout_constraintBottom_toTopOf="@+id/celiacSwitch"
+        app:layout_constraintEnd_toEndOf="@+id/hypertensionSwitch" />
 
     <Switch
-        android:id="@+id/switch3"
+        android:id="@+id/celiacSwitch"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_marginBottom="10dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        app:layout_constraintBottom_toTopOf="@+id/switch4"
-        app:layout_constraintEnd_toEndOf="@+id/switch2" />
+        app:layout_constraintBottom_toTopOf="@+id/diabetesSwitch"
+        app:layout_constraintEnd_toEndOf="@+id/anemiaSwitch" />
 
     <Switch
-        android:id="@+id/switch4"
+        android:id="@+id/diabetesSwitch"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_marginBottom="9dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        app:layout_constraintBottom_toTopOf="@+id/switch5"
-        app:layout_constraintEnd_toEndOf="@+id/switch3" />
+        app:layout_constraintBottom_toTopOf="@+id/kwashiorkorSwitch"
+        app:layout_constraintEnd_toEndOf="@+id/celiacSwitch" />
 
     <Switch
-        android:id="@+id/switch5"
+        android:id="@+id/kwashiorkorSwitch"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_marginBottom="10dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        app:layout_constraintBottom_toTopOf="@+id/switch6"
-        app:layout_constraintEnd_toEndOf="@+id/switch4" />
+        app:layout_constraintBottom_toTopOf="@+id/ricketsSwitch"
+        app:layout_constraintEnd_toEndOf="@+id/diabetesSwitch" />
 
     <Switch
-        android:id="@+id/switch6"
+        android:id="@+id/ricketsSwitch"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_marginBottom="10dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        app:layout_constraintBottom_toTopOf="@+id/switch7"
-        app:layout_constraintEnd_toEndOf="@+id/switch5" />
+        app:layout_constraintBottom_toTopOf="@+id/marasmusSwitch"
+        app:layout_constraintEnd_toEndOf="@+id/kwashiorkorSwitch" />
 
     <Switch
-        android:id="@+id/switch7"
+        android:id="@+id/marasmusSwitch"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_marginBottom="119dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/switch6" />
+        app:layout_constraintEnd_toEndOf="@+id/ricketsSwitch" />
 
     <Button
         android:id="@+id/allergy_home"

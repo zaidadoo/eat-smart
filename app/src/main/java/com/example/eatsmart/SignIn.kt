@@ -26,32 +26,32 @@ class SignIn : AppCompatActivity() {
     }
 
     fun onClickCheckUserCredentials(view: View?) {
-        val userEmail : EditText = findViewById(R.id.userEmail)
-        val userPassword : EditText = findViewById(R.id.userPassword)
-
-        val URL = "content://com.example.EatSmart.UsersProvider"
-        val users = Uri.parse(URL)
-
-        val cols = listOf<String>(UsersProvider.email,
-            UsersProvider.password).toTypedArray()
-
+//        val userEmail : EditText = findViewById(R.id.userEmail)
+//        val userPassword : EditText = findViewById(R.id.userPassword)
+//
+//        val URL = "content://com.example.EatSmart.UsersProvider"
+//        val users = Uri.parse(URL)
+//
+//        val cols = listOf<String>(UsersProvider.email,
+//            UsersProvider.password).toTypedArray()
+//
 //        var rs = contentResolver.query(users,
 //                cols,
 //            "${cols[0]} LIKE ?",
 //                Array(1){"%${userEmail.text}%"},
 //                null)
-
-//        var rs = contentResolver.query(users,
-//                null,
-//            null,
-//                null,
-//                null)
 //
-//        if(rs != null){
-//            val intent = Intent(this, AllergiesSelection::class.java)
-//            startActivity(intent)
-//        }
-
+////        var rs = contentResolver.query(users,
+////                null,
+////            null,
+////                null,
+////                null)
+////
+////        if(rs != null){
+////            val intent = Intent(this, AllergiesSelection::class.java)
+////            startActivity(intent)
+////        }
+//
 //        when (rs?.count) {
 //            null -> {
 //                Toast.makeText(applicationContext, "Not found!", Toast.LENGTH_SHORT).show()
@@ -65,7 +65,7 @@ class SignIn : AppCompatActivity() {
 //                val intent = Intent(this, AllergiesSelection::class.java)
 //                startActivity(intent)            }
 //        }
-//
+
         val intent = Intent(this, AllergiesSelection::class.java)
         startActivity(intent)
     }
